@@ -1,0 +1,29 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">EvenOrUneven</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="ComputerName">Компьютер</string>
+    <string name="txtListNumberCom">0  0  0</string>
+    <string name="txtSumCom">0</string>
+    <string name="txtEvenCom">Чет</string>
+    <string name="txtUnevenCom">Нечёт</string>
+
+    <string name="PlayerName">Игрок</string>
+    <string name="txtListNumberPlayer">0  0  0</string>
+    <string name="txtSumPlayer">0</string>
+    <string name="txtEvenPlayer">Чет</string>
+    <string name="txtUnevenPlayer">Нечёт</string>
+
+    <string name="txtCountPlayer" translatable="false">0</string>
+    <string name="txtCountCom" translatable="false">0</string>
+
+    <string name="butPlay" translatable="false">Играть</string>
+
+
+
+
+
+
+
+</resources>
