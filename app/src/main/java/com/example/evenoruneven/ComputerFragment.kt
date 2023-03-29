@@ -53,11 +53,21 @@ class ComputerFragment : Fragment() {
         binding.radioComEven.isChecked = false
         binding.radioComUneven.isChecked = false
     }
+    private fun radioChoiseEven(){
+        binding.radioComEven.isEnabled = true
+        binding.radioComEven.isChecked = true
+        binding.radioComEven.isEnabled = false
+    }
+    private fun radioChoiseUneven(){
+        binding.radioComUneven.isEnabled = true
+        binding.radioComUneven.isChecked = true
+        binding.radioComUneven.isEnabled = false
+    }
 
     private fun ValidateImageChecked(sum: Int, binding: FragmentComputerBinding): Int{
         if(radio == 1){
-            binding.ImageComEven.isVisible = true
-            binding.radioComEven.isChecked = true
+             radioChoiseEven()
+             binding.ImageComEven.isVisible = true
             if(sum % 2 == 0){
                 binding.ImageComEven.setImageResource(R.drawable.okimage)
                 return 1
@@ -65,7 +75,7 @@ class ComputerFragment : Fragment() {
                 binding.ImageComEven.setImageResource(R.drawable.notimage)
             }
         }else{
-            binding.radioComUneven.isChecked = true
+            radioChoiseUneven();
             binding.ImageComUneven.isVisible = true
             if(sum % 2 != 0){
                 binding.ImageComUneven.setImageResource(R.drawable.okimage)
