@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.butStart.isEnabled = false
+        dataModel.butStartClickFragment.value = false
         openFrag(ComputerFragment.newInstance(), R.id.frameComputer);
         openFrag(PlayerFragment.newInstance(), R.id.framePlayer);
 
@@ -26,7 +27,6 @@ class MainActivity : AppCompatActivity() {
         dataModel.txtUnevenCheckForPlayerFragment.observe(this,{
             binding.butStart.isEnabled = it
         })
-
     }
 
     private fun openFrag(f:Fragment, idHolder:Int){
@@ -38,6 +38,12 @@ class MainActivity : AppCompatActivity() {
 
     fun butStart(view: View){
 
-
+        if(binding.butStart.text == "Играть") {
+            dataModel.butStartClickFragment.value = true
+            binding.butStart.text = "Продолжить"
+        }else{
+            dataModel.butStartClickFragment.value = false
+            binding.butStart.text = "Играть"
+        }
     }
 }
